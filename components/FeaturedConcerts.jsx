@@ -44,7 +44,7 @@ export default function FeaturedConcerts() {
       <div className="max-w-7xl mx-auto px-15 ">
         
         {/* --- HEADING --- */}
-        <h2 className="text-xl md:text-3xl font-bold text-white mb-6 tracking-tight">
+        <h2 className="text-xl md:text-[24px] font-medium text-white mb-6 tracking-tight">
           Trending Now
         </h2>
 

@@ -10,9 +10,12 @@ import NewsletterSection from '../components/NewsletterSection'
 import TravelMasterInfo from '../components/TravelMasterInfo'
 import VenuesSlider from '../components/VenuesSlider'
 import HowItWorks from '../components/HowItWorks'
-import FAQ from '../components/FAQ'
 import NetflixStatsSection from '../components/StatsSection'
 import CTASection from '../components/cta'
+import AppSection from '../components/AppSection'
+import BookingCta from '../components/BookingCta';
+import TravelMasterLocations from '../components/TravelMasterLocations';
+import FAQ from "../components/FAQ";
 
 export default function Home() {
   // Is variable ko hum style prop mein use karenge
@@ -27,10 +30,14 @@ export default function Home() {
         <HowItWorks />
         <VenuesSlider />
         <TabSection />
-        <NetflixStatsSection />
-        <NewsletterSection />
+        <BookingCta />
+      <TravelMasterLocations />
+      <FAQ />
+        {/* <NetflixStatsSection /> */}
+        {/* <NewsletterSection /> */}
+        {/* <AppSection />
         <CTASection />
-        <FAQ />
+        <FAQ /> */}
         {/* <TravelMasterInfo /> */}
       </main>
 
