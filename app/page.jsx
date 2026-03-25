@@ -30,6 +30,7 @@ export default function Home() {
         <HowItWorks />
         <VenuesSlider />
         <TabSection />
+        <AppSection />
         <BookingCta />
       <TravelMasterLocations />
       <FAQ />
