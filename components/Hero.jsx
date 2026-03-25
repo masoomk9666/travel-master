@@ -348,7 +348,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden text-white !py-20">
+    <section className="relative min-h-[110vh] flex flex-col justify-center overflow-hidden text-white !py-20">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentEvent?.id}
