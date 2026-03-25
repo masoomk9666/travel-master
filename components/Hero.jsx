@@ -348,7 +348,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[108vh] flex flex-col justify-center overflow-hidden text-white py-20">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden text-white !py-20">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentEvent?.id}
@@ -369,7 +369,7 @@ export default function Hero() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-0 h-[65vh] flex flex-col justify-between">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-15 flex flex-col justify-between">
         <AnimatePresence mode="wait">
           <motion.div
             key="hero-content"
@@ -409,7 +409,7 @@ export default function Hero() {
       </div>
 
       {/* --- NEW INDICATOR COMPLEX (Exactly as per image_1.png style) --- */}
-      <div className="absolute bottom-40 right-10 z-40 flex flex-col items-end gap-5">
+      <div className="absolute bottom-30 right-10 z-40 flex flex-col items-end gap-5">
 
         {/* The Dot & Pill Indicators with Arrows */}
         <div className="flex items-center gap-8">

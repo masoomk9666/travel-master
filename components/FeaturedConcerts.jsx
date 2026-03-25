@@ -4,14 +4,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const concerts = [
-  { id: 1, artist: "ONE PIECE", image: "/img1.png" },
-  { id: 2, artist: "DHURANDHAR", image: "/img4.png" },
-  { id: 3, artist: "WAR MACHINE", image: "/img1.png" },
-  { id: 4, artist: "TASKARRE", image: "/img4.png" },
-  { id: 5, artist: "MADE IN KOREA", image: "/img5.png" },
-   { id: 6, artist: "WAR MACHINE", image: "/img1.png" },
-  { id: 7, artist: "TASKARRE", image: "/img4.png" },
-  { id: 8, artist: "MADE IN KOREA", image: "/img5.png" },
+  { id: 1, artist: "ONE PIECE", image: "/image01.png" },
+  { id: 2, artist: "DHURANDHAR", image: "/image02.png" },
+  { id: 3, artist: "WAR MACHINE", image: "/image03.png" },
+  { id: 4, artist: "TASKARRE", image: "/image04.png" },
+  { id: 5, artist: "MADE IN KOREA", image: "/image05.png" },
+   { id: 6, artist: "WAR MACHINE", image: "/image06.png" },
+  // { id: 7, artist: "TASKARRE", image: "/image01.png" },
+  // { id: 8, artist: "MADE IN KOREA", image: "/image02.png" },
 ];
 
 export default function FeaturedConcerts() {
@@ -41,7 +41,7 @@ export default function FeaturedConcerts() {
   return (
     <section className="bg-black py-10 md:py-16 overflow-hidden group/section">
       {/* --- WRAPPER FOR PADDING & ALIGNMENT --- */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto px-15 ">
         
         {/* --- HEADING --- */}
         <h2 className="text-xl md:text-3xl font-bold text-white mb-6 tracking-tight">
@@ -65,21 +65,21 @@ export default function FeaturedConcerts() {
           <div 
             ref={containerRef}
             onScroll={checkScroll}
-            className="flex gap-3 md:gap-4 overflow-x-auto scroll-smooth no-scrollbar w-full pb-6"
+            className="flex gap-3 md:gap-4 overflow-x-auto scroll-smooth no-scrollbar w-full py-6"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {concerts.map((concert) => (
               <div 
                 key={concert.id} 
                 // Desktop: 100% / 5 cards minus gaps
-                className="relative flex-shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105 z-10
-                           w-[160px] md:w-[calc((100%-48px)/5)]" 
+                className="relative flex-shrink-0 cursor-pointer transition-transform duration-300  z-10
+                           w-[160px] md:w-[17%]" 
               >
-                <div className="w-full overflow-hidden ">
+                <div className="w-full h-full hover:scale-105 transition-all duration-700">
                   <img 
                     src={concert.image} 
                     alt={concert.artist}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain rounded-2xl"
                   />
                  
                   
