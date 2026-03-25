@@ -69,7 +69,7 @@ const StageoFooterSection = () => {
               <li className="hover:text-white cursor-pointer">FAQ</li>
             </ul>
           </div>
-
+   
           {/* Column 4: Support */}
           <div>
             <h4 className="text-[12px]  uppercase font-bold text-gray-400 mb-6">Support</h4>
