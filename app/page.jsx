@@ -19,10 +19,12 @@ import FAQ from "../components/FAQ";
 
 export default function Home() {
   // Is variable ko hum style prop mein use karenge
-  const fontStyle = { fontFamily: "'Space Grotesk', sans-serif" };
+  // const fontStyle = { fontFamily: "'Space Grotesk', sans-serif" };
 
   return (
-    <div style={fontStyle} className=" min-h-screen">
+    <div 
+    // style={fontStyle} 
+    className=" min-h-screen">
       <Navbar />
       <main>
         <Hero />
