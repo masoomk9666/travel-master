@@ -129,6 +129,7 @@ import {
   ChevronRight 
 } from 'lucide-react';
 import { useRouter } from 'next/navigation'; // Redirect ke liye
+import Link from 'next/link';
 
 const TABS = [
   { name: 'CONCERTS', icon: Music },
@@ -139,33 +140,39 @@ const TABS = [
 
 // --- DATA SECTIONS ---
 const CONCERT_DATA = [
-  { id: 1, title: 'CALVIN HARRIS', venue: 'Malahide Castle, Dublin', date: 'July 2026', tag: 'LAST SEATS', image: '/item1.png' },
-  { id: 2, title: 'KESHA', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/item2.png' },
-  { id: 3, title: 'BON JOVI', venue: 'Arena, London', date: 'August 2026', image: '/item3.png' },
-  { id: 4, title: 'CMAT', venue: 'Olympia Theatre', date: 'Sept 2026', image: '/item1.png' },
-  { id: 5, title: 'CALVIN HARRIS', venue: 'Malahide Castle, Dublin', date: 'July 2026', tag: 'LAST SEATS', image: '/item2.png' },
-  { id: 6, title: 'KESHA', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/item2.png' },
-  { id: 7, title: 'BON JOVI', venue: 'Arena, London', date: 'August 2026', image: '/item3.png' },
-  { id: 8, title: 'CMAT', venue: 'Olympia Theatre', date: 'Sept 2026', image: '/item1.png' },
-  { id: 9, title: 'CALVIN HARRIS', venue: 'Malahide Castle, Dublin', date: 'July 2026', tag: 'LAST SEATS', image: '/item1.png' },
-  { id: 10, title: 'KESHA', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/item2.png' },
-  { id: 11, title: 'BON JOVI', venue: 'Arena, London', date: 'August 2026', image: '/item3.png' },
-  { id: 12, title: 'CMAT', venue: 'Olympia Theatre', date: 'Sept 2026', image: '/item1.png' },
-  { id: 13, title: 'CALVIN HARRIS', venue: 'Malahide Castle, Dublin', date: 'July 2026', tag: 'LAST SEATS', image: '/item2.png' },
-  { id: 14, title: 'KESHA', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/item2.png' },
-  { id: 15, title: 'BON JOVI', venue: 'Arena, London', date: 'August 2026', image: '/item3.png' },
-  { id: 16, title: 'CMAT', venue: 'Olympia Theatre', date: 'Sept 2026', image: '/item1.png' },
-  { id: 17, title: 'BON JOVI', venue: 'Arena, London', date: 'August 2026', image: '/item3.png' },
-  { id: 18, title: 'CMAT', venue: 'Olympia Theatre', date: 'Sept 2026', image: '/item1.png' },
+  { id: 1, title: 'CALVIN HARRIS', venue: 'Malahide Castle, Dublin', date: 'July 2026', tag: 'LAST SEATS', image: '/calvin-Harris.jpg' },
+  { id: 2, title: 'Metalica', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/metalica.jpg' },
+  { id: 3, title: 'Olivia Dean', venue: 'Arena, London', date: 'August 2026', image: '/Olivia-Dean.jpg' },
+  { id: 4, title: 'Weeknd', venue: 'Olympia Theatre', date: 'Sept 2026', image: '/Weeknd.jpg' },
+  { id: 5, title: 'Zach Bryan', venue: 'Malahide Castle, Dublin', date: 'July 2026', tag: 'LAST SEATS', image: '/Zach-Bryan.jpg' },
+  { id: 6, title: 'Luke Combs', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/Luke-Combs.jpg' },
+   { id: 7, title: 'CALVIN HARRIS', venue: 'Malahide Castle, Dublin', date: 'July 2026', tag: 'LAST SEATS', image: '/calvin-Harris.jpg' },
+  { id: 8, title: 'Metalica', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/metalica.jpg' },
+  { id: 9, title: 'Olivia Dean', venue: 'Arena, London', date: 'August 2026', image: '/Olivia-Dean.jpg' },
+  { id: 10, title: 'Weeknd', venue: 'Olympia Theatre', date: 'Sept 2026', image: '/Weeknd.jpg' },
+  { id: 11, title: 'Zach Bryan', venue: 'Malahide Castle, Dublin', date: 'July 2026', tag: 'LAST SEATS', image: '/Zach-Bryan.jpg' },
+  { id: 12, title: 'Luke Combs', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/Luke-Combs.jpg' },
+  // { id: 8, title: 'CMAT', venue: 'Olympia Theatre', date: 'Sept 2026', image: '/item1.png' },
+  // { id: 9, title: 'CALVIN HARRIS', venue: 'Malahide Castle, Dublin', date: 'July 2026', tag: 'LAST SEATS', image: '/item1.png' },
+  // { id: 10, title: 'KESHA', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/item2.png' },
+  // { id: 11, title: 'BON JOVI', venue: 'Arena, London', date: 'August 2026', image: '/item3.png' },
+  // { id: 12, title: 'CMAT', venue: 'Olympia Theatre', date: 'Sept 2026', image: '/item1.png' },
+  // { id: 13, title: 'CALVIN HARRIS', venue: 'Malahide Castle, Dublin', date: 'July 2026', tag: 'LAST SEATS', image: '/item2.png' },
+  // { id: 14, title: 'KESHA', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/item2.png' },
+  // { id: 15, title: 'BON JOVI', venue: 'Arena, London', date: 'August 2026', image: '/item3.png' },
+  // { id: 16, title: 'CMAT', venue: 'Olympia Theatre', date: 'Sept 2026', image: '/item1.png' },
+  // { id: 17, title: 'BON JOVI', venue: 'Arena, London', date: 'August 2026', image: '/item3.png' },
+  // { id: 18, title: 'CMAT', venue: 'Olympia Theatre', date: 'Sept 2026', image: '/item1.png' },
 ];
 
 const SPORTS_DATA = [
-  { id: 101, title: 'CHAMPIONS LEAGUE', venue: 'Wembley Stadium', date: 'May 2026', image: '/item2.png' },
-  { id: 102, title: 'WIMBLEDON', venue: 'London', date: 'June 2026', image: '/item3.png' },
+   { id: 1, title: 'CALVIN HARRIS', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/calvin-Harris.jpg' },
+  { id: 2, title: 'Metalica', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/metalica.jpg' },
 ];
 
 const FESTIVAL_DATA = [
-  { id: 201, title: 'COACHELLA', venue: 'California, USA', date: 'April 2026', image: '/item1.png' },
+  { id: 8, title: 'Metalica', venue: 'Malahide Castle, Dublin', date: 'July 2026', image: '/metalica.jpg' },
+  { id: 9, title: 'Olivia Dean', venue: 'Arena, London', date: 'August 2026', image: '/Olivia-Dean.jpg' },
 ];
 
 const SHOW_DATA = {
@@ -238,7 +245,7 @@ export default function EventTabs() {
                 </div>
 
                 {/* Info Block */}
-                <div className="relative h-[100px] p-4 flex flex-col justify-center overflow-hidden transition-colors duration-300 group-hover:bg-[#1a1a1a] rounded-b-[10px]">
+                <div className="relative h-[100px] p-4 flex flex-col justify-center overflow-hidden transition-colors duration-300 group-hover:bg-[#1a1a1a] rounded-b-[10px] ">
                   <div className="transition-all duration-300 transform group-hover:-translate-y-10 group-hover:opacity-0">
                     <h3 className="text-[14px] font-bold leading-tight tracking-wide mb-1 truncate uppercase">
                       {show.title}
@@ -249,9 +256,13 @@ export default function EventTabs() {
 
                   {/* Hover Button */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 px-4">
-                    <button className="w-full bg-[#006DF2] text-white py-3 text-[11px] font-medium rounded-[6px] tracking-widest hover:bg-white hover:text-black transition-colors flex items-center justify-center gap-2">
+                  <Link
+                  href="/booking"
+                  >
+                    <button className="w-full bg-[#006DF2] text-white py-3 px-5 text-[11px] font-medium rounded-[6px] tracking-widest hover:bg-white hover:text-black transition-colors flex items-center justify-center gap-2 cursor-pointer">
                       BOOK NOW
                     </button>
+                    </Link>
                   </div>
                 </div>
               </motion.div>

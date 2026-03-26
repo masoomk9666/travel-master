@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google'
+import { Inter, DM_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import GlobalGrid from '@/components/GlobalGrid'
@@ -11,14 +11,19 @@ const inter = Inter({
   display: 'swap',
 })
 
-export const metadata = {
-  title: 'Travel Master - The Event Travel Specialist',
-  description: 'Book your bus seats for the biggest concerts',
-}
+export const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+});
+
+// export const metadata = {
+//   title: 'Travel Master - The Event Travel Specialist',
+//   description: 'Book your bus seats for the biggest concerts',
+// }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
       <body className={`${inter.className} antialiased bg-black text-white relative`}>
         <GlobalGrid />
 

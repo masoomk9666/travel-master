@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const BookingCta = () => {
   return (
@@ -35,9 +36,12 @@ const BookingCta = () => {
         </p>
 
         {/* CTA Button */}
-        <button className="rounded-md bg-white px-8 py-3 text-sm font-semibold text-black transition-transform hover:scale-105 active:scale-95">
+        <Link
+        href="/booking">
+        <button className="rounded-md bg-white px-8 py-3 text-[14px] font-medium text-black transition-transform cursor-pointer">
           Book Your Bus
         </button>
+        </Link>
       </div>
     </section>
     </div>

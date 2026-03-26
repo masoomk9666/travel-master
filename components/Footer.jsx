@@ -37,7 +37,7 @@ const StageoFooterSection = () => {
         </div>
 
         {/* LINKS GRID */}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-12 mb-20 max-w-7xl mx-auto">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-20 max-w-7xl mx-auto px-15">
           {/* Column 1: Brand */}
           <div className="space-y-6">
             <img src="/travel-logo.png" alt="TravelMaster" className="h-10 w-auto" />
@@ -83,7 +83,7 @@ const StageoFooterSection = () => {
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-widest text-gray-400 font-mono">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-[14px]  tracking-widest text-white ">
           <p>© 2026 TravelMaster.ie — All rights reserved</p>
           <div className="flex flex-wrap justify-center gap-6">
             <a href="#" className="hover:text-white">Privacy Policy</a>

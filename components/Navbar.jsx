@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react' // Icons list se User aur ShoppingBag hata diye
 import Image from "next/image";
+import { dmSans } from '../app/layout';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,8 +19,8 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/10 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className={`fixed top-0 z-50 w-full border-b border-white/10 bg-black/10 backdrop-blur-md ${dmSans.className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-15">
         <div className="flex justify-between items-center h-20">
           
           {/* Logo Section */}

@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       fontFamily: {
         // 'sans' utility ko variable se connect karein
-        sans: ['var(--font-space-grotesk)', 'sans-serif'],
+        // sans: ['var(--font-space-grotesk)', 'sans-serif'],
+        sans: ['var(--font-inter)', 'sans-serif'],
       },
     },
   },

@@ -31,7 +31,7 @@ const AppSection = () => {
     <section className="relative bg-[#0D0D0D] text-white pb-20 pt-35 px-16 overflow-hidden">
       <div className="absolute top-0 -right-20  w-[400px] h-[400px] bg-[#006DF269] blur-[120px] rounded-full"></div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-12 items-center px-15">
         {/* Left Content */}
         <div className="space-y-8">
           <div className="space-y-4">
@@ -84,7 +84,7 @@ const AppSection = () => {
 
           {/* Front Phone (With Image Slider) */}
           <div className="relative z-20">
-            <img src="/gif/app.gif" className="h-120" />
+            <img src="/gif/app.gif" className="h-100" />
 
             {/* <div className="w-[260px] h-[520px] rounded-[3rem] border-[6px] border-[#D9794C] bg-black overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] relative">
               
@@ -107,7 +107,7 @@ const AppSection = () => {
           </div>
           {/* Back Phone (Static Map) */}
           <div className="relative z-10 ">
-            <img src="/booking-ui/app.png" className="-ml-2 h-120" />
+            <img src="/booking-ui/app.png" className="-ml-2 h-100" />
           </div>
         </div>
       </div>
