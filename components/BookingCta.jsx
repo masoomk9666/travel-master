@@ -22,7 +22,7 @@ const BookingCta = () => {
 
       {/* Content Container */}
       <div className="relative z-10 max-w-4xl px-4 text-center space-y-4">
-        <h1 className=" text-[24px] md:text-[45px] font-medium tracking-tight ">
+        <h1 className=" text-[24px] md:text-[45px] font-bold tracking-tight ">
           Travel With The Fans
         </h1>
         

@@ -194,11 +194,11 @@ export default function EventTabs() {
   };
 
   return (
-    <section className="bg-black text-white py-12 px-6 min-h-screen font-sans">
+    <section className="bg-black text-white py-12 px-6 min-h-screen font-sans " id='concerts'>
       <div className="max-w-7xl mx-auto px-15">
         
         {/* Navigation Tabs */}
-        <div className="flex w-full mb-12 gap-[2px]">
+        <div className="flex w-full mb-12 gap-[2px]" >
           {TABS.map((tab) => {
             const Icon = tab.icon;
             return (
@@ -218,7 +218,7 @@ export default function EventTabs() {
           })}
         </div>
 
-        <h2 className="text-[24px] font-medium mb-8 tracking-tight">Concerts </h2>
+        <h2 className="text-[32px] font-bold mb-10 tracking-tight" >Concerts </h2>
 
         {/* Grid Layout */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">

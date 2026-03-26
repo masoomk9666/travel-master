@@ -6,10 +6,12 @@ const TravelMasterLocations = () => {
     <section className="relative min-h-[600px] w-full flex items-center justify-center overflow-hidden bg-black text-white p-6 md:p-12">
 
       {/* 2. FOREGROUND CONTENT CONTAINER (Centered) */}
-      <div className=" relative z-10 flex flex-col items-center justify-center text-center gap-0 w-full">
+      <div className=" relative z-10 flex flex-col items-center justify-center text-center gap-0 w-full"
+      id='pickupPoints'
+      >
         
         {/* Subtitle / Stat Text */}
-        <h2 className="text-2xl md:text-3xl font-normal tracking-wide opacity-90 ">
+        <h2 className="text-2xl md:text-[32px] font-bold tracking-wide opacity-90 ">
           80+ Pickup Locations Nationwide
         </h2>
         <h1 

@@ -390,7 +390,7 @@ export default function Hero() {
                 placeholder="Search for an event or venue"
                 className="bg-transparent px-6 py-3 w-full outline-none text-[16px] placeholder:text-[#FFFFFF73]"
               />
-              <button className="bg-[#006DF2] px-10 flex items-center gap-2 hover:bg-blue-600 transition-all shrink-0 font-medium uppercase text-[16px] tracking-widest text-white">
+              <button className="bg-[#006DF2] px-10 flex items-center gap-2 hover:bg-blue-600 transition-all shrink-0 font-medium uppercase text-[14px] tracking-widest text-white cursor-pointer">
                 <Search size={20} /> Search
               </button>
             </div>

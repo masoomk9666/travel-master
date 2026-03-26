@@ -58,17 +58,17 @@ body {
 @layer components {
   .heading-1 {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance leading-tight;
-    font-family: var(--font-playfair);
+    font-family: var(--font-inter);
   }
 
   .heading-2 {
     @apply text-3xl md:text-4xl font-bold text-balance leading-tight;
-    font-family: var(--font-playfair);
+    font-family: var(--font-inter);
   }
 
   .heading-3 {
     @apply text-2xl md:text-3xl font-bold text-balance leading-snug;
-    font-family: var(--font-playfair);
+    font-family: var(--font-inter);
   }
 
   .btn-primary {

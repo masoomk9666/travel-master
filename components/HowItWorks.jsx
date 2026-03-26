@@ -131,7 +131,7 @@ const HowItWorks = () => {
     <section className="bg-black py-20 px-6 text-white overflow-hidden">
       <div className="max-w-7xl px-15 mx-auto">
         {/* Section Title */}
-        <h2 className="text-[24px] font-medium mb-16 tracking-tight">
+        <h2 className="text-[32px] font-bold mb-10 tracking-tight">
           How It Works
         </h2>
         

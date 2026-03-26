@@ -40,7 +40,7 @@ const FAQ = () => {
     <section className="bg-black py-24 px-6 text-white min-h-screen">
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl md:text-[45px] font-medium text-center mb-16 tracking-tight">
+        <h2 className="text-4xl md:text-[32px] font-bold text-center mb-16 tracking-tight">
           Frequently Asked Questions
         </h2>
 

@@ -35,7 +35,7 @@ const AppSection = () => {
         {/* Left Content */}
         <div className="space-y-8">
           <div className="space-y-4">
-            <h2 className="text-4xl md:text-[45px] font-medium leading-tight">
+            <h2 className="text-4xl md:text-[45px] font-bold leading-tight">
               Your Event Travel <br /> in Your Pocket
             </h2>
             <p className="text-white text-[17px] ">

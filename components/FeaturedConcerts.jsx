@@ -113,12 +113,12 @@ import React, { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const concerts = [
-  { id: 1, image: "/image01.png" },
-  { id: 2, image: "/image02.png" },
-  { id: 3, image: "/image03.png" },
-  { id: 4, image: "/image04.png" },
-  { id: 5, image: "/image05.png" },
-  { id: 6, image: "/image06.png" },
+  { id: 1, image: "/calvin-Harris.jpg" },
+  { id: 2, image: "/metalica.jpg" },
+  { id: 3, image: "/Olivia-Dean.jpg" },
+  { id: 4, image: "/Weeknd.jpg" },
+  { id: 5, image: "/Zach-Bryan.jpg" },
+  { id: 6, image: "/Luke-Combs.jpg" },
 ];
 
 export default function FeaturedConcerts() {
@@ -148,7 +148,7 @@ export default function FeaturedConcerts() {
     <section className="bg-black py-10 md:py-16 overflow-hidden group/section">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         
-        <h2 className="text-xl md:text-[24px] font-medium text-white mb-8 tracking-tight">
+        <h2 className="text-xl md:text-[32px] font-bold text-white mb-3 tracking-tight">
           Trending Now
         </h2>
 
@@ -168,7 +168,7 @@ export default function FeaturedConcerts() {
           <div 
             ref={containerRef}
             onScroll={checkScroll}
-            className="flex gap-12 md:gap-8 overflow-x-auto scroll-smooth no-scrollbar w-full py-8 px-6"
+            className="flex gap-12 md:gap-8 overflow-x-auto scroll-smooth no-scrollbar w-full py-0 px-6"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {concerts.map((concert, index) => (

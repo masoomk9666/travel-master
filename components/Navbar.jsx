@@ -13,9 +13,10 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/events', label: 'Concerts' },
-    { href: '/news', label: 'Festivals' },
-    { href: '/pages', label: 'Sports' },
+    { href: '#concerts', label: 'Concerts' },
+    { href: '#', label: 'Festivals' },
+    { href: '#', label: 'Sports' },
+    { href: '#pickupPoints', label: 'Pickup Points' },
   ]
 
   return (
@@ -50,7 +51,7 @@ export default function Navbar() {
           {/* Right Side Button (Desktop) */}
           <div className="hidden md:flex items-center">
             <Link 
-              href="/find-bus" 
+              href="#" 
               className="bg-[#006DF2] hover:bg-blue-700 rounded-[6px] text-white px-6 py-2.5 text-[14px] font-medium  tracking-widest transition-all duration-300 shadow-lg shadow-blue-500/30 active:scale-95"
             >
               Find Your Bus

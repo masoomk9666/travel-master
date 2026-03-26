@@ -20,8 +20,8 @@ export default function VenuesSlider() {
       <div className="max-w-7xl mx-auto px-6 md:px-15">
         
         {/* --- HEADING --- */}
-        <div className="mb-8 text-left">
-          <h2 className="text-lg md:text-[24px] font-medium text-white/90 tracking-tight">
+        <div className="mb-10 text-left">
+          <h2 className="text-lg md:text-[32px] font-bold text-white/90 tracking-tight ">
             Venues We Travel To
           </h2>
         </div>
