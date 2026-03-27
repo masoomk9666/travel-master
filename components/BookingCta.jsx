@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const BookingCta = () => {
   return (
-    <div className='relative px-5 py-20 bg-black'>
+    <div className='relative  px-3 md:px-5  py-10 md:py-20 bg-black'>
         <div className="absolute top-10 right-0 w-full h-[100px]  bg-black blur-[20px]  z-20 "></div>
     <section className="relative min-h-[80vh] w-full flex items-center justify-center text-white overflow-hidden">
       {/* Background Image */}
@@ -21,7 +21,7 @@ const BookingCta = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-4xl px-4 text-center space-y-4">
+      <div className="relative z-10 max-w-4xl px-4 text-center space-y-2 md:space-y-4">
         <h1 className=" text-[24px] md:text-[45px] font-bold tracking-tight ">
           Travel With The Fans
         </h1>
@@ -30,7 +30,7 @@ const BookingCta = () => {
           The Journey Is Part of the Experience
         </h2>
         
-        <p className="mx-auto mb-10 max-w-2xl text-base leading-relaxed opacity-90 md:text-[17px]">
+        <p className="mx-auto mb-5 md:mb-10 max-w-2xl text-base leading-relaxed opacity-90 md:text-[17px]">
           Travel with people going to the same show as you. 
           Share the excitement on the way there and the stories on the way back.
         </p>

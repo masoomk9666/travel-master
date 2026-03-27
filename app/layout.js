@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import GlobalGrid from '@/components/GlobalGrid'
 
+
 // Inter font config - Jo Helvetica Neue ka premium alternative hai
 const inter = Inter({
   subsets: ['latin'],

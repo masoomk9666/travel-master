@@ -16,8 +16,8 @@ export default function VenuesSlider() {
   const duplicatedVenues = [...venues, ...venues, ...venues, ...venues];
 
   return (
-    <section className="bg-black py-10 md:py-16 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 md:px-15">
+    <section className="bg-black py-8 sm:py-12 px-4 sm:px-6  border-t border-white/5">
+      <div className="max-w-7xl mx-auto ">
         
         {/* --- HEADING --- */}
         <div className="mb-10 text-left">

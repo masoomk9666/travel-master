@@ -1,119 +1,15 @@
-// 'use client';
-
-// import React, { useState, useRef, useEffect } from 'react';
-// import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-// const concerts = [
-//   { id: 1, artist: "ONE PIECE", image: "/image01.png" },
-//   { id: 2, artist: "DHURANDHAR", image: "/image02.png" },
-//   { id: 3, artist: "WAR MACHINE", image: "/image03.png" },
-//   { id: 4, artist: "TASKARRE", image: "/image04.png" },
-//   { id: 5, artist: "MADE IN KOREA", image: "/image05.png" },
-//    { id: 6, artist: "WAR MACHINE", image: "/image06.png" },
-//   // { id: 7, artist: "TASKARRE", image: "/image01.png" },
-//   // { id: 8, artist: "MADE IN KOREA", image: "/image02.png" },
-// ];
-
-// export default function FeaturedConcerts() {
-//   const containerRef = useRef(null);
-//   const [showLeftArrow, setShowLeftArrow] = useState(false);
-//   const [showRightArrow, setShowRightArrow] = useState(true);
-
-//   const checkScroll = () => {
-//     if (containerRef.current) {
-//       const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
-//       setShowLeftArrow(scrollLeft > 20);
-//       setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 20);
-//     }
-//   };
-
-//   const handleScroll = (direction) => {
-//     if (containerRef.current) {
-
-//       const scrollAmount = containerRef.current.clientWidth;
-//       containerRef.current.scrollBy({
-//         left: direction === 'left' ? -scrollAmount : scrollAmount,
-//         behavior: 'smooth',
-//       });
-//     }
-//   };
-
-//   return (
-//     <section className="bg-black py-10 md:py-16 overflow-hidden group/section">
-//       {/* --- WRAPPER FOR PADDING & ALIGNMENT --- */}
-//       <div className="max-w-7xl mx-auto px-15 ">
-
-//         {/* --- HEADING --- */}
-//         <h2 className="text-xl md:text-[24px] font-medium text-white mb-6 tracking-tight">
-//           Trending Now
-//         </h2>
-
-//         {/* --- SLIDER MAIN AREA --- */}
-//         <div className="relative flex items-center">
-
-//           {/* LEFT ARROW (Netflix Styled) */}
-//           {showLeftArrow && (
-//             <button
-//               onClick={() => handleScroll('left')}
-//               className="absolute -left-4 md:-left-6 z-50 h-[40%] w-8 md:w-10 bg-zinc-900/80 backdrop-blur-md rounded-full opacity-0 group-hover/section:opacity-100 transition-all duration-300 flex items-center justify-center text-white border border-white/10 "
-//             >
-//               <ChevronLeft size={24} strokeWidth={3} />
-//             </button>
-//           )}
-
-//           {/* CARDS CONTAINER */}
-//           <div
-//             ref={containerRef}
-//             onScroll={checkScroll}
-//             className="flex gap-3 md:gap-4 overflow-x-auto scroll-smooth no-scrollbar w-full py-6"
-//             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-//           >
-//             {concerts.map((concert) => (
-//               <div
-//                 key={concert.id}
-//                 // Desktop: 100% / 5 cards minus gaps
-//                 className="relative flex-shrink-0 cursor-pointer transition-transform duration-300  z-10
-//                            w-[160px] md:w-[17%]"
-//               >
-//                 <div className="w-full h-full hover:scale-105 transition-all duration-700">
-//                   <img
-//                     src={concert.image}
-//                     alt={concert.artist}
-//                     className="w-full h-full object-contain rounded-2xl"
-//                   />
-
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-
-//           {/* RIGHT ARROW (Netflix Styled) */}
-//           {showRightArrow && (
-//             <button
-//               onClick={() => handleScroll('right')}
-//               className="absolute -right-4 md:-right-6 z-50 h-[40%] w-8 md:w-10 bg-zinc-900/80 backdrop-blur-md rounded-full opacity-0 group-hover/section:opacity-100 transition-all duration-300 flex items-center justify-center text-white border border-white/10"
-//             >
-//               <ChevronRight size={24} strokeWidth={3} />
-//             </button>
-//           )}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 
 import React, { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const concerts = [
-  { id: 1, image: "/calvin-Harris.jpg" },
-  { id: 2, image: "/metalica.jpg" },
-  { id: 3, image: "/Olivia-Dean.jpg" },
-  { id: 4, image: "/Weeknd.jpg" },
-  { id: 5, image: "/Zach-Bryan.jpg" },
-  { id: 6, image: "/Luke-Combs.jpg" },
+  { id: 1, name:"Calvin Harris", image: "/calvin-Harris.jpg" },
+  { id: 2, name:"Metalica", image: "/metalica.jpg" },
+  { id: 3, name:"Olivia Dean", image: "/Olivia-Dean.jpg" },
+  { id: 4, name:"Weeknd", image: "/Weeknd.jpg" },
+  { id: 5, name:"Zach Bryan", image: "/Zach-Bryan.jpg" },
+  { id: 6, name:"Luke Combs", image: "/Luke-Combs.jpg" },
 ];
 
 export default function FeaturedConcerts() {
@@ -140,8 +36,8 @@ export default function FeaturedConcerts() {
   };
 
   return (
-    <section className="bg-black py-10 md:py-16 overflow-hidden group/section">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+    <section className="bg-black py-8 sm:py-12 px-4 sm:px-6  overflow-hidden group/section">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-xl md:text-[32px] font-bold text-white mb-3 tracking-tight">
           Trending Now
         </h2>
@@ -182,15 +78,9 @@ export default function FeaturedConcerts() {
                     alt="concert"
                     className="w-full h-full object-cover transition-transform duration-700 rounded-lg"
                   />
-                  {/* <span 
-                  className="absolute -left-8 bottom-6 z-100 text-[100px] font-black leading-none select-none transition-transform duration-500"
-                  style={{
-                    color: '#414141',
-                    WebkitTextStroke: '2.5px rgba(255,255,255,1)',
-                  }}
-                >
-                  {index + 1}
-                </span> */}
+                  <h3 className="absolute bottom-1 left-2">
+                    {concert.name && concert.name}  
+                  </h3>
                   <span
                     className="absolute -left-8 bottom-30 z-100 text-[100px] font-black leading-none select-none transition-transform duration-500"
                     style={{
@@ -210,7 +100,8 @@ export default function FeaturedConcerts() {
                     </span>
                     {index + 1}
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-15" />
+                  
+                  {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-15" /> */}
                 </div>
               </div>
             ))}
