@@ -72,12 +72,12 @@ export default function VenuesSlider() {
                   <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/60 transition-all duration-300 z-20" />
                   
                   {/* 4. HOVER BUTTON */}
-                  <div className="absolute inset-0 flex items-end justify-center pb-8 opacity-0 group-hover/card:opacity-100 transition-all duration-300 translate-y-4 group-hover/card:translate-y-0 z-50">
+                  {/* <div className="absolute inset-0 flex items-end justify-center pb-8 opacity-0 group-hover/card:opacity-100 transition-all duration-300 translate-y-4 group-hover/card:translate-y-0 z-50">
                      <button className="bg-[#007bff] text-white text-[14px] rounded-[5px] font-medium  px-5 py-3 flex items-center gap-2 hover:bg-white hover:text-black transition-colors shadow-2xl  cursor-pointer">
                        View Venue
                        <Play size={12} />
                      </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
