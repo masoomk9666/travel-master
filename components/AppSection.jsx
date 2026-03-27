@@ -209,12 +209,12 @@ const AppSection = () => {
 
           {/* Front Phone (With Image Slider) */}
           <div className="relative z-20">
-            <img src="/gif/app.gif" className="h-[280px] sm:h-[320px] md:h-[360px] lg:h-[400px] w-auto" alt="App Demo" />
+            <img src="/app1.png" className="h-[300px] md:h-[360px] lg:h-[400px] w-auto" alt="App Demo" />
           </div>
           
           {/* Back Phone (Static Map) */}
           <div className="relative z-10">
-            <img src="/booking-ui/app.png" className="-ml-2 sm:-ml-3 md:-ml-4 lg:-ml-2 h-[280px] sm:h-[300px] md:h-[340px] lg:h-[380px] w-auto" alt="App Interface" />
+            <img src="/booking-ui/app.png" className="-ml-2 sm:-ml-3 md:-ml-4 lg:-ml-2 h-[300px] md:h-[360px] lg:h-[400px] w-auto" alt="App Interface" />
           </div>
         </div>
       </div>
