@@ -47,13 +47,6 @@ const concerts = [
     date: "October 2026",
     image: "/Luke-Combs.png",
   },
-  {
-    id: 7,
-    name: "LUKE COMBS",
-    location: "Nissan Stadium, Nashville",
-    date: "October 2026",
-    image: "/Luke-Combs.png",
-  },
 ];
 
 export default function FeaturedConcerts() {
