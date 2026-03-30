@@ -85,7 +85,7 @@ const TravelMasterLocations = () => {
           <img 
             src="/booking-ui/locations-img.png"
             alt="Ireland map with pickup locations"
-            className="object-contain w-full sm:w-auto h-auto max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] block mx-auto mt-0  md:-mt-5 lg:-mt-10"
+            className="object-contain w-full sm:w-auto h-auto max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] block mx-auto mt-0  md:-mt-5 lg:-mt-20"
           />
         </div>
       </div>

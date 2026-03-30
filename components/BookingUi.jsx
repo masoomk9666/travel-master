@@ -483,8 +483,17 @@ const BookingUi = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white p-4 sm:p-6 !pt-32 sm:!pt-40 md:!pt-50 !pb-20 sm:!pb-24 md:!pb-30 font-sans selection:bg-blue-500">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12">
-        
+      {/* BACKGROUND IMAGE SECTION */}
+      <div className="absolute top-0 left-0 w-full h-[700px] overflow-hidden z-0">
+        <img 
+          src="/hero-bg.png" // Apni image ka path yahan check karlein
+          alt="Calvin Harris Background" 
+          className="w-full h-full object-cover opacity-60"
+        />
+        {/* Gradient Overlay for smooth transition to black */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black"></div>
+      </div>
+      <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12 z-10">
         {/* LEFT SIDE - EVENT INFO */}
         <div className="lg:col-span-6 space-y-6 sm:space-y-7 md:space-y-8">
           <div>
@@ -500,7 +509,7 @@ const BookingUi = () => {
             {features.map((item, i) => (
               <li
                 key={i}
-                className="flex items-center gap-3 text-[#9996A0] text-[15px] sm:text-[16px] md:text-[17px]"
+                className="flex items-center gap-3 text-white text-[15px] sm:text-[16px] md:text-[17px]"
               >
                 <div className="p-1 bg-blue-500 rounded-full flex-shrink-0">
                   <Check className="w-3 h-3 text-white fill-blue-500/10" />
@@ -808,7 +817,7 @@ const BookingUi = () => {
       </div>
 
       {/* BOTTOM GLOW */}
-      <div className="absolute bottom-7 md:bottom-5 md:-bottom-15 left-0 w-full z-2 pointer-events-none">
+      <div className="absolute bottom-7 md:bottom-5 lg:-bottom-15 left-0 w-full z-2 pointer-events-none">
         <img
           src="/glow.png"
           alt="Bottom Glow"

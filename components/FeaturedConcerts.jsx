@@ -1,15 +1,59 @@
+
 "use client";
 
 import React, { useState, useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, MapPin, Calendar, Link } from "lucide-react";
 
 const concerts = [
-  { id: 1, name:"Calvin Harris", image: "/calvin-Harris.jpg" },
-  { id: 2, name:"Metalica", image: "/metalica.jpg" },
-  { id: 3, name:"Olivia Dean", image: "/Olivia-Dean.jpg" },
-  { id: 4, name:"Weeknd", image: "/Weeknd.jpg" },
-  { id: 5, name:"Zach Bryan", image: "/Zach-Bryan.jpg" },
-  { id: 6, name:"Luke Combs", image: "/Luke-Combs.jpg" },
+  {
+    id: 1,
+    name: "CALVIN HARRIS",
+    location: "Malahide Castle, Dublin",
+    date: "July 2026",
+    image: "/calvin-Harris.png",
+  },
+  {
+    id: 2,
+    name: "METALLICA",
+    location: "Stade de France, Paris",
+    date: "August 2026",
+    image: "/metalica.png",
+  },
+  {
+    id: 3,
+    name: "OLIVIA DEAN",
+    location: "Hammersmith, London",
+    date: "June 2026",
+    image: "/Olivia-Dean.png",
+  },
+  {
+    id: 4,
+    name: "THE WEEKND",
+    location: "Wembley Stadium, London",
+    date: "September 2026",
+    image: "/Weeknd.png",
+  },
+  {
+    id: 5,
+    name: "ZACH BRYAN",
+    location: "Red Rocks, Colorado",
+    date: "May 2026",
+    image: "/Zach-Bryan.png",
+  },
+  {
+    id: 6,
+    name: "LUKE COMBS",
+    location: "Nissan Stadium, Nashville",
+    date: "October 2026",
+    image: "/Luke-Combs.png",
+  },
+  {
+    id: 7,
+    name: "LUKE COMBS",
+    location: "Nissan Stadium, Nashville",
+    date: "October 2026",
+    image: "/Luke-Combs.png",
+  },
 ];
 
 export default function FeaturedConcerts() {
@@ -36,7 +80,7 @@ export default function FeaturedConcerts() {
   };
 
   return (
-    <section className="bg-black py-8 sm:py-12 px-4 sm:px-6  overflow-hidden group/section">
+    <section className="bg-black py-8 sm:py-12 px-4 sm:px-6 overflow-hidden group/section">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-xl md:text-[32px] font-bold text-white mb-3 tracking-tight">
           Trending Now
@@ -64,44 +108,138 @@ export default function FeaturedConcerts() {
               <div
                 key={concert.id}
                 className="relative flex-shrink-0 flex items-end group/card"
-                style={{ width: "180px", height: "260px" }}
+                style={{ width: "200px", height: "290px" }}
               >
-                {/* 2. THE CARD */}
-                <div className="relative w-[160px] h-[230px] ml-auto  rounded-lg z-10 bg-neutral-900 border border-white/5 transition-all duration-500 group-hover/card:-translate-y-4 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
-                  {/* 3. TOP BLUE GLOW (Code based) */}
-                  {/* <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-blue-500/40 via-blue-500/5 to-transparent z-20 pointer-events-none" /> */}
-                  {/* 1. BIG NUMBER (Hollow Outline Style) */}
-
+                {/* THE CARD */}
+                <div className="relative w-[180px] h-[250px] ml-auto rounded-lg z-10 bg-neutral-900  transition-all duration-500 group-hover/card:-translate-y-4  ">
                   {/* IMAGE */}
                   <img
                     src={concert.image}
-                    alt="concert"
+                    alt={concert.name}
                     className="w-full h-full object-cover transition-transform duration-700 rounded-lg"
                   />
-                  <h3 className="absolute bottom-1 left-2">
-                    {concert.name && concert.name}  
-                  </h3>
-                  <span
-                    className="absolute -left-8 bottom-30 z-100 text-[100px] font-black leading-none select-none transition-transform duration-500"
-                    style={{
-                      color: "#414141",
-                      position: "relative", // Zaroori hai pseudo-element ke liye
-                    }}
-                    // Hum CSS class ya inline style ke bajaye pseudo-element use karenge
-                  >
-                    <span
-                      className="absolute bottom-[10px]"
-                      style={{
-                        WebkitTextStroke: "6px rgba(255,255,255,1)", // Stroke thoda thick rakhein
-                        zIndex: -1,
-                      }}
-                    >
-                      {index + 1}
-                    </span>
-                    {index + 1}
-                  </span>
-                  
-                  {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-15" /> */}
+
+                  {/* CONTENT OVERLAY (Bilkul Image jaisa) */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent flex flex-col justify-end p-7 pb-4">
+                    <h3 className="text-white font-medium text-[15px] mb-1">
+                      {concert.name}
+                    </h3>
+
+                    <div className="flex items-center gap-1 text-[12px] text-white mb-0.5">
+                      <MapPin size={12} className="flex-shrink-0" />
+                      <span className="truncate">{concert.location}</span>
+                    </div>
+
+                    <div className="flex items-center gap-1 text-[12px] text-white mb-3">
+                      <Calendar size={12} className="flex-shrink-0" />
+                      <span>{concert.date}</span>
+                    </div>
+                    <a href="/booking">
+                    <button className="w-full bg-[#0072F5] text-white text-[10px] font-medium py-1.5 rounded-md hover:bg-blue-600 transition-colors cursor-pointer">
+                      Book Your Seat
+                    </button>
+                    </a>
+                  </div>
+
+                  {/* BIG NUMBER SVG (Keeping your logic) */}
+                  {/* <div className="absolute -left-12 bottom-4 z-20 pointer-events-none">
+                    <svg width="100" height="100" viewBox="0 0 120 120">
+                      <defs>
+                        <linearGradient id={`gradStroke-${index}`} x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#0772F2" />
+                          <stop offset="100%" stopColor="#86C6FF" />
+                        </linearGradient>
+                      </defs>
+                      <text
+                        x="50%" y="60%" textAnchor="middle" dominantBaseline="middle"
+                        stroke={`url(#gradStroke-${index})`} strokeWidth="4" fill="transparent"
+                        fontSize="100" fontWeight="900" className="select-none"
+                      >
+                        {index + 1}
+                      </text>
+                      <text
+                        x="50%" y="60%" textAnchor="middle" dominantBaseline="middle"
+                        fill="#000000" fontSize="100" fontWeight="900" className="select-none"
+                      >
+                        {index + 1}
+                      </text>
+                    </svg>
+                  </div> */}
+
+                  <div className="absolute -left-13 bottom-4 z-20 pointer-events-none">
+                    <svg width="100" height="100" viewBox="0 0 120 120">
+                      <defs>
+                        {/* 1. Dynamic Gradient */}
+                        <linearGradient
+                          id={`gradStroke-${index}`}
+                          x1="0%"
+                          y1="0%"
+                          x2="100%"
+                          y2="0%"
+                        >
+                          <stop offset="0%" stopColor="#0772F2" />
+                          <stop offset="100%" stopColor="#86C6FF" />
+                        </linearGradient>
+
+                        {/* 2. White Glow/Shadow Filter */}
+                        <filter
+                          id={`whiteGlow-${index}`}
+                          x="-20%"
+                          y="-20%"
+                          width="140%"
+                          height="140%"
+                        >
+                          <feGaussianBlur stdDeviation="3" result="blur" />
+                          <feComposite
+                            in="blur"
+                            in2="SourceGraphic"
+                            operator="out"
+                          />
+                          <feComponentTransfer>
+                            <feFuncA type="linear" slope="0.8" />
+                          </feComponentTransfer>
+                          <feMerge>
+                            <feMergeNode />
+                            <feMergeNode in="SourceGraphic" />
+                          </feMerge>
+                        </filter>
+                      </defs>
+
+                      {/* Outline Text with Glow Filter */}
+                      <text
+                        x="50%"
+                        y="60%"
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                        stroke={`url(#gradStroke-${index})`}
+                        strokeWidth="4"
+                        fill="transparent"
+                        fontSize="100"
+                        fontWeight="900"
+                        className="select-none"
+                        filter={`url(#whiteGlow-${index})`} // Filter yahan apply ho raha hai
+                        style={{
+                          filter: `drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.4))`,
+                        }} // Additional soft shadow
+                      >
+                        {index + 1}
+                      </text>
+
+                      {/* Main Black Fill Text */}
+                      <text
+                        x="50%"
+                        y="60%"
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                        fill="#000000"
+                        fontSize="100"
+                        fontWeight="900"
+                        className="select-none"
+                      >
+                        {index + 1}
+                      </text>
+                    </svg>
+                  </div>
                 </div>
               </div>
             ))}
@@ -121,3 +259,8 @@ export default function FeaturedConcerts() {
     </section>
   );
 }
+
+
+
+
+
