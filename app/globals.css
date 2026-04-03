@@ -87,3 +87,10 @@ body {
     @apply w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary;
   }
 }
+
+
+@media (max-width: 450px) and (max-height:700px){
+  .skHero{
+    height:100vh;
+  }
+}

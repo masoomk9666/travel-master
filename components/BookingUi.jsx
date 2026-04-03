@@ -520,7 +520,7 @@ const BookingUi = () => {
           </ul>
 
           {/* DYNAMIC SUMMARY */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 bg-[#111] rounded-2xl overflow-hidden border border-white/10 shadow-xl">
+          <div className="hidden md:grid grid-cols-2 sm:grid-cols-4 bg-[#111] rounded-lg overflow-hidden border border-white/10 shadow-xl">
             <div className="flex flex-col items-center py-2 sm:py-3 border-r border-white/5">
               <span className="text-[11px] sm:text-[12px] md:text-[14px] uppercase tracking-widest text-[#D0D0D0] font-[500] mb-1">
                 County
@@ -570,10 +570,10 @@ const BookingUi = () => {
 
         {/* RIGHT SIDE - FORM */}
         <div className="lg:col-span-6">
-          <div className="bg-[radial-gradient(circle_at_bottom_right,#006df2a1,transparent_50%)] bg-[#0D0D0D] via-[#0D0D0D] to-[#006df2a1] rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 shadow-[0_0_50px_rgba(0,0,0,1)] relative overflow-hidden">
+          <div className="bg-[radial-gradient(circle_at_bottom_right,#006df2a1,transparent_50%)] bg-[#0D0D0D] via-[#0D0D0D] to-[#006df2a1] rounded-lg  p-5 sm:p-6 md:p-8 shadow-[0_0_50px_rgba(0,0,0,1)] relative overflow-hidden">
             
             {/* INTERACTIVE TABS */}
-            <div className="grid grid-cols-4 gap-1 sm:gap-2 mb-6 sm:mb-8 md:mb-10 bg-white/5 rounded-xl">
+            <div className="grid grid-cols-4 gap-1 sm:gap-2 mb-6 sm:mb-8 md:mb-10 bg-white/5 rounded-lg">
               {STEPS.map((step, idx) => (
                 <button
                   key={step}
@@ -608,7 +608,7 @@ const BookingUi = () => {
                           time: "7:00 pm",
                         })
                       }
-                      className={`p-3 sm:p-4 rounded-2xl border cursor-pointer transition-all flex items-center justify-between ${
+                      className={`p-3 sm:p-4 rounded-lg border cursor-pointer transition-all flex items-center justify-between ${
                         selectedDate.id === i 
                           ? "bg-[#1D1D1D] border-blue-500" 
                           : "bg-[#1D1D1D] border-transparent"
@@ -697,7 +697,7 @@ const BookingUi = () => {
                     <div
                       key={p.id}
                       onClick={() => setSelectedPickup(p)}
-                      className={`p-3 sm:p-4 md:p-5 rounded-2xl border cursor-pointer transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 ${
+                      className={`p-3 sm:p-4 md:p-5 rounded-lg border cursor-pointer transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 ${
                         selectedPickup?.id === p.id 
                           ? "bg-blue-600/10 border-blue-500" 
                           : "bg-[#151515] border-transparent"
@@ -737,7 +737,7 @@ const BookingUi = () => {
             {currentStep === 3 && (
               <div className="animate-in fade-in slide-in-from-right-4 duration-300">
                 <h2 className="text-[20px] sm:text-[22px] md:text-[24px] mb-6 sm:mb-7 md:mb-8">How many Seats</h2>
-                <div className="bg-[#151515] p-5 sm:p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 mb-8 sm:mb-10">
+                <div className="bg-[#151515] p-5 sm:p-6 md:p-8 rounded-lg flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 mb-8 sm:mb-10">
                   <span className="text-[18px] sm:text-[20px] md:text-[22px] text-gray-300">
                     Number of seats
                   </span>
@@ -765,7 +765,7 @@ const BookingUi = () => {
             {/* ACTION BUTTON */}
             <button
               onClick={handleNext}
-              className="relative w-full bg-[#006DF2] hover:bg-[#0060d0] text-[15px] sm:text-[16px] md:text-[18px] text-white font-bold py-3 sm:py-3.5 md:py-4 rounded-2xl mt-6 sm:mt-7 md:mt-8 flex items-center justify-center transition-all active:scale-95 shadow-[0_10px_20px_rgba(0,112,243,0.3)] cursor-pointer"
+              className="relative w-full bg-[#006DF2] hover:bg-[#0060d0] text-[15px] sm:text-[16px] md:text-[18px] text-white font-bold py-3 sm:py-3.5 md:py-4 rounded-lg mt-6 sm:mt-7 md:mt-8 flex items-center justify-center transition-all active:scale-95 shadow-[0_10px_20px_rgba(0,112,243,0.3)] cursor-pointer"
             >
               <span>
                 {currentStep === 0 && "Choose your county"}

@@ -22,9 +22,9 @@ export default function Home() {
       <main>
         <Hero />
         <FeaturedConcerts />
-        <HowItWorks />
-        <VenuesSlider />
         <TabSection />
+        <VenuesSlider />
+        <HowItWorks />
         <AppSection />
         <BookingCta />
       <TravelMasterLocations />

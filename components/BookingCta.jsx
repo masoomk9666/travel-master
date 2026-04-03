@@ -38,7 +38,7 @@ const BookingCta = () => {
         {/* CTA Button */}
         <Link
         href="/booking">
-        <button className="rounded-md bg-white px-8 py-3 text-[14px] font-medium text-black transition-transform cursor-pointer">
+        <button className="rounded-lg bg-white px-8 py-3 text-[14px] font-medium text-black transition-transform cursor-pointer">
           Book Your Bus
         </button>
         </Link>

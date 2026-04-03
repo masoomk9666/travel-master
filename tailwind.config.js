@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         // 'sans' utility ko variable se connect karein
         // sans: ['var(--font-space-grotesk)', 'sans-serif'],
+        sans: ['var(--font-google-sans)', 'ui-sans-serif', 'system-ui'],
         sans: ['var(--font-inter)', 'sans-serif'],
       },
     },

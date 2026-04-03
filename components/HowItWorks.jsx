@@ -30,7 +30,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="bg-black py-8 sm:py-12 px-4 sm:px-6  text-white overflow-hidden">
+    <section className="bg-black pb-8 md:pb-20  px-4 sm:px-6  text-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <h2 className="text-[32px] font-bold mb-10 tracking-tight">

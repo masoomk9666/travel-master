@@ -1,8 +1,13 @@
-
 "use client";
 
 import React, { useState, useRef } from "react";
-import { ChevronLeft, ChevronRight, MapPin, Calendar, Link } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  MapPin,
+  Calendar,
+  Link,
+} from "lucide-react";
 
 const concerts = [
   {
@@ -94,7 +99,7 @@ export default function FeaturedConcerts() {
           <div
             ref={containerRef}
             onScroll={checkScroll}
-            className="flex gap-12 md:gap-8 overflow-y-hidden overflow-x-auto scroll-smooth no-scrollbar w-full py-0 px-6"
+            className="flex gap-12 md:gap-8 overflow-y-hidden overflow-x-auto scroll-smooth no-scrollbar w-full py-0 px-3"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {concerts.map((concert, index) => (
@@ -128,36 +133,18 @@ export default function FeaturedConcerts() {
                       <span>{concert.date}</span>
                     </div>
                     <a href="/booking">
-                    <button className="w-full bg-[#0072F5] text-white text-[10px] font-medium py-1.5 rounded-md hover:bg-blue-600 transition-colors cursor-pointer">
-                      Book Your Seat
-                    </button>
+                      <button className="w-full bg-[#0072F5] text-white text-[10px] font-medium py-1.5 rounded-md hover:bg-blue-600 transition-colors cursor-pointer flex justify-center items-center gap-1">
+                        <img
+                          src="/icons/seat.svg"
+                          alt="Seat Icon"
+                          width="12"
+                          height="12"
+                          className="brightness-200" // Agar color white karna ho toh filter use kar sakte hain
+                        />
+                        <span>Book Your Seat</span>
+                      </button>
                     </a>
                   </div>
-
-                  {/* BIG NUMBER SVG (Keeping your logic) */}
-                  {/* <div className="absolute -left-12 bottom-4 z-20 pointer-events-none">
-                    <svg width="100" height="100" viewBox="0 0 120 120">
-                      <defs>
-                        <linearGradient id={`gradStroke-${index}`} x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#0772F2" />
-                          <stop offset="100%" stopColor="#86C6FF" />
-                        </linearGradient>
-                      </defs>
-                      <text
-                        x="50%" y="60%" textAnchor="middle" dominantBaseline="middle"
-                        stroke={`url(#gradStroke-${index})`} strokeWidth="4" fill="transparent"
-                        fontSize="100" fontWeight="900" className="select-none"
-                      >
-                        {index + 1}
-                      </text>
-                      <text
-                        x="50%" y="60%" textAnchor="middle" dominantBaseline="middle"
-                        fill="#000000" fontSize="100" fontWeight="900" className="select-none"
-                      >
-                        {index + 1}
-                      </text>
-                    </svg>
-                  </div> */}
 
                   <div className="absolute -left-13 bottom-4 z-20 pointer-events-none">
                     <svg width="100" height="100" viewBox="0 0 120 120">
@@ -252,8 +239,3 @@ export default function FeaturedConcerts() {
     </section>
   );
 }
-
-
-
-
-
